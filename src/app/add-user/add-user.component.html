@@ -1,0 +1,18 @@
+<div>
+    <button (click)="addClick()">Add User</button>
+    <div *ngIf="showForm">
+        <p>
+            <label for="name">Name: </label>
+            <input id="name" [(ngModel)]="user.Name" placeholder="name">
+        </p>
+        <p>
+            <label for="lastName">Last name: </label>
+            <input id="lastName" [(ngModel)]="user.LastName" placeholder="last name">
+        </p>
+        <p>
+            <label for="phone">Phone number: </label>
+            <input id="phone" [(ngModel)]="phone.PhoneNumber" placeholder="+48 123456789">
+        </p>
+        <button (click)="submit()">Save</button>
+    </div>
+</div>

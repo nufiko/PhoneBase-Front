@@ -1,0 +1,6 @@
+<div>
+    <p>Add phone for {{ user.Name }} {{ user.LastName }}</p>
+    <input id="phone" [(ngModel)]="newNumber">
+    <button (click)="saveNumber()">Save</button>
+    <p *ngIf="errorMessage.length > 0">{{ errorMessage }}</p>
+</div>

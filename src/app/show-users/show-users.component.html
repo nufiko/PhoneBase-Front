@@ -1,0 +1,15 @@
+<div>
+    <ul *ngIf="users.length > 0">
+        <li *ngFor="let user of users" (click)="ShowPhones(user)">
+            <p>{{ user.LastName }} {{ user.Name }} - {{ user.Phones.length }}</p>
+            <div *ngIf="user.Id === selectedUser?.Id">
+                <ul>
+                    <li *ngFor="let phone of user.Phones">
+                        {{ phone.PhoneNumber }}
+                    </li>
+                </ul>
+                <app-add-phone *ngIf="selectedUser" [user]=selectedUser></app-add-phone>
+            </div>
+        </li>
+    </ul>
+</div>
